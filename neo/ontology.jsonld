@@ -1,0 +1,151 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://sanderdemeij.github.io/neo/BuildingProperty"
+    }, {
+      "@id" : "https://sanderdemeij.github.io/neo/EnergyUse"
+    }, {
+      "@id" : "https://sanderdemeij.github.io/neo/NeighborhoodProperty"
+    }, {
+      "@id" : "https://sanderdemeij.github.io/neo/UserProperty"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://sanderdemeij.github.io/neo/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/abstract" : [ {
+    "@language" : "en",
+    "@value" : "An ontology for describing larger scale urban elements and their properties. The ontology is mostly focussed on capturing urban energy related data, however, other urban data can also be captured."
+  } ],
+  "http://purl.org/dc/elements/1.1/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Alex J.A. Donkers"
+  }, {
+    "@language" : "en",
+    "@value" : "Dujuan Yang"
+  }, {
+    "@language" : "en",
+    "@value" : "Matthijs Klepper"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Sander R. de Meij"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@language" : "en",
+    "@value" : "https://sanderdemeij.github.io/neo/"
+  }, {
+    "@language" : "en",
+    "@value" : "neo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Neighborhood Energy Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://sanderdemeij.github.io/neo/"
+  } ],
+  "https://schema.org/dateCreated" : [ {
+    "@language" : "en",
+    "@value" : "2023-04-21T12:00:00"
+  } ]
+}, {
+  "@id" : "https://sanderdemeij.github.io/neo/BuildingProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property related to the buildings of an (urban) area or feature of interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bop#Property"
+  } ]
+}, {
+  "@id" : "https://sanderdemeij.github.io/neo/ElectricityUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Electricity use of a specific urban element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://sanderdemeij.github.io/neo/EnergyUse"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://sanderdemeij.github.io/neo/GasUse"
+  } ]
+}, {
+  "@id" : "https://sanderdemeij.github.io/neo/EnergyUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Energy use of any type of a specific urban element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bop#Property"
+  } ]
+}, {
+  "@id" : "https://sanderdemeij.github.io/neo/GasUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Gas use of a specific urban element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://sanderdemeij.github.io/neo/EnergyUse"
+  } ]
+}, {
+  "@id" : "https://sanderdemeij.github.io/neo/Neighborhood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Any area defined on an urban scale, which contains other urban areas or features of interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bop#Zone"
+  } ]
+}, {
+  "@id" : "https://sanderdemeij.github.io/neo/NeighborhoodProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property related to the urban area itself."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bop#Property"
+  } ]
+}, {
+  "@id" : "https://sanderdemeij.github.io/neo/UserProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property related to the users of an (urban) area or feature of interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bop#Property"
+  } ]
+}, {
+  "@id" : "https://schema.org/dateCreated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/bop#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/bop#Zone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]
