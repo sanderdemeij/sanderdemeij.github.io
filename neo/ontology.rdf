@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://sanderdemeij.github.io/neo/"
+     xml:base="https://sanderdemeij.github.io/neo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://sanderdemeij.github.io/neo/">
+        <owl:versionIRI rdf:resource="https://sanderdemeij.github.io/neo/"/>
+        <dc:abstract xml:lang="en">An ontology for describing larger scale urban elements and their properties. The ontology is mostly focussed on capturing urban energy related data, however, other urban data can also be captured.</dc:abstract>
+        <dc:contributor xml:lang="en">Alex J.A. Donkers</dc:contributor>
+        <dc:contributor xml:lang="en">Dujuan Yang</dc:contributor>
+        <dc:contributor xml:lang="en">Matthijs Klepper</dc:contributor>
+        <dc:creator xml:lang="en">Sander R. de Meij</dc:creator>
+        <vann:preferredNamespacePrefix xml:lang="en">https://sanderdemeij.github.io/neo/</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix xml:lang="en">neo</vann:preferredNamespacePrefix>
+        <rdfs:label xml:lang="en">Neighborhood Energy Ontology</rdfs:label>
+        <schema:dateCreated xml:lang="en">2023-04-21T12:00:00</schema:dateCreated>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- https://schema.org/dateCreated -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/dateCreated"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://sanderdemeij.github.io/neo/BuildingProperty -->
+
+
+    <owl:Class rdf:about="https://sanderdemeij.github.io/neo/BuildingProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="en">Property related to the buildings of an (urban) area or feature of interest.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sanderdemeij.github.io/neo/ElectricityUse -->
+
+
+    <owl:Class rdf:about="https://sanderdemeij.github.io/neo/ElectricityUse">
+        <rdfs:subClassOf rdf:resource="https://sanderdemeij.github.io/neo/EnergyUse"/>
+        <owl:disjointWith rdf:resource="https://sanderdemeij.github.io/neo/GasUse"/>
+        <rdfs:comment xml:lang="en">Electricity use of a specific urban element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sanderdemeij.github.io/neo/EnergyUse -->
+
+
+    <owl:Class rdf:about="https://sanderdemeij.github.io/neo/EnergyUse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="en">Energy use of any type of a specific urban element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sanderdemeij.github.io/neo/GasUse -->
+
+
+    <owl:Class rdf:about="https://sanderdemeij.github.io/neo/GasUse">
+        <rdfs:subClassOf rdf:resource="https://sanderdemeij.github.io/neo/EnergyUse"/>
+        <rdfs:comment xml:lang="en">Gas use of a specific urban element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sanderdemeij.github.io/neo/Neighborhood -->
+
+
+    <owl:Class rdf:about="https://sanderdemeij.github.io/neo/Neighborhood">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Zone"/>
+        <rdfs:comment xml:lang="en">Any area defined on an urban scale, which contains other urban areas or features of interest.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sanderdemeij.github.io/neo/NeighborhoodProperty -->
+
+
+    <owl:Class rdf:about="https://sanderdemeij.github.io/neo/NeighborhoodProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="en">Property related to the urban area itself.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sanderdemeij.github.io/neo/UserProperty -->
+
+
+    <owl:Class rdf:about="https://sanderdemeij.github.io/neo/UserProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="en">Property related to the users of an (urban) area or feature of interest.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bop#Property -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bop#Property"/>
+    
+
+
+    <!-- https://w3id.org/bop#Zone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bop#Zone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://sanderdemeij.github.io/neo/BuildingProperty"/>
+            <rdf:Description rdf:about="https://sanderdemeij.github.io/neo/EnergyUse"/>
+            <rdf:Description rdf:about="https://sanderdemeij.github.io/neo/NeighborhoodProperty"/>
+            <rdf:Description rdf:about="https://sanderdemeij.github.io/neo/UserProperty"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
